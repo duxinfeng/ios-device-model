@@ -4,58 +4,59 @@
 // https://www.theiphonewiki.com/wiki/Models
 + (NSString *)devicePlatform
 {
-    struct utsname systemInfo;
-    uname(&systemInfo);
-    NSString *platform = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+  
+  struct utsname systemInfo;
+  uname(&systemInfo);
+  NSString *platform = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
     
-    //iPhone
-    if ([platform isEqualToString:@"iPhone1,1"])    return @"iPhone 1G";
-    if ([platform isEqualToString:@"iPhone1,2"])    return @"iPhone 3G";
-    if ([platform isEqualToString:@"iPhone2,1"])    return @"iPhone 3GS";
-    if ([platform isEqualToString:@"iPhone3,1"])    return @"iPhone 4";
-    if ([platform isEqualToString:@"iPhone3,2"])    return @"iPhone 4";
-    if ([platform isEqualToString:@"iPhone4,1"])    return @"iPhone 4S";
-    if ([platform isEqualToString:@"iPhone5,1"])    return @"iPhone 5";
-    if ([platform isEqualToString:@"iPhone5,2"])    return @"iPhone 5";
-    if ([platform isEqualToString:@"iPhone5,3"])    return @"iPhone 5C";
-    if ([platform isEqualToString:@"iPhone5,4"])    return @"iPhone 5C";
-    if ([platform isEqualToString:@"iPhone6,1"])    return @"iPhone 5S";
-    if ([platform isEqualToString:@"iPhone6,2"])    return @"iPhone 5S";
-    if ([platform isEqualToString:@"iPhone7,1"])    return @"iPhone 6 Plus";
-    if ([platform isEqualToString:@"iPhone7,2"])    return @"iPhone 6";
-    if ([platform isEqualToString:@"iPhone8,1"])    return @"iPhone 6S";
-    if ([platform isEqualToString:@"iPhone8,2"])    return @"iPhone 6S Plus";
-    if ([platform isEqualToString:@"iPhone8,4"])    return @"iPhone SE";
-    if ([platform isEqualToString:@"iPhone9,1"])    return @"iPhone 7";
-    if ([platform isEqualToString:@"iPhone9,3"])    return @"iPhone 7";
-    if ([platform isEqualToString:@"iPhone9,2"])    return @"iPhone 7 Plus";
-    if ([platform isEqualToString:@"iPhone9,4"])    return @"iPhone 7 Plus";
-    if ([platform isEqualToString:@"iPhone10,1"])   return @"iPhone 8";
-    if ([platform isEqualToString:@"iPhone10.4"])   return @"iPhone 8";
-    if ([platform isEqualToString:@"iPhone10,2"])   return @"iPhone 8 Plus";
-    if ([platform isEqualToString:@"iPhone10,5"])   return @"iPhone 8 Plus";
-    if ([platform isEqualToString:@"iPhone10,3"])   return @"iPhone X";
-    if ([platform isEqualToString:@"iPhone10,6"])   return @"iPhone X";
-    if ([platform isEqualToString:@"iPhone11,2"])   return @"iPhone XS";
-    if ([platform isEqualToString:@"iPhone11,4"])   return @"iPhone XS Max";
-    if ([platform isEqualToString:@"iPhone11,6"])   return @"iPhone XS Max";
-    if ([platform isEqualToString:@"iPhone11,8"])   return @"iPhone XR";
-	  if ([platform isEqualToString:@"iPhone12,1"])   return @"iPhone 11";
-	  if ([platform isEqualToString:@"iPhone12,3"])   return @"iPhone 11 Pro";
-	  if ([platform isEqualToString:@"iPhone12,5"])   return @"iPhone 11 Pro Max";
-	  if ([platform isEqualToString:@"iPhone12,8"])   return @"iPhone SE 2";
-	  if ([platform isEqualToString:@"iPhone13,1"])   return @"iPhone 12 mini";
-	  if ([platform isEqualToString:@"iPhone13,2"])   return @"iPhone 12";
-	  if ([platform isEqualToString:@"iPhone13,3"])   return @"iPhone 12 Pro";
-	  if ([platform isEqualToString:@"iPhone13,4"])   return @"iPhone 12 Pro Max";
-	  if ([platform isEqualToString:@"iPhone14,4"])   return @"iPhone 13 mini";
-	  if ([platform isEqualToString:@"iPhone14,5"])   return @"iPhone 13";
-	  if ([platform isEqualToString:@"iPhone14,2"])   return @"iPhone 13 Pro";
-	  if ([platform isEqualToString:@"iPhone14,3"])   return @"iPhone 13 Pro Max";
-	  if ([platform isEqualToString:@"iPhone14,7"])   return @"iPhone 14";
-	  if ([platform isEqualToString:@"iPhone14,7"])   return @"iPhone 14 Plus";
-	  if ([platform isEqualToString:@"iPhone15,2"])   return @"iPhone 14 Pro";
-	  if ([platform isEqualToString:@"iPhone15,2"])   return @"iPhone 14 Pro Max";
+  //iPhone
+  if ([platform isEqualToString:@"iPhone1,1"])    return @"iPhone 1G";
+  if ([platform isEqualToString:@"iPhone1,2"])    return @"iPhone 3G";
+  if ([platform isEqualToString:@"iPhone2,1"])    return @"iPhone 3GS";
+  if ([platform isEqualToString:@"iPhone3,1"])    return @"iPhone 4";
+  if ([platform isEqualToString:@"iPhone3,2"])    return @"iPhone 4";
+  if ([platform isEqualToString:@"iPhone4,1"])    return @"iPhone 4S";
+  if ([platform isEqualToString:@"iPhone5,1"])    return @"iPhone 5";
+  if ([platform isEqualToString:@"iPhone5,2"])    return @"iPhone 5";
+  if ([platform isEqualToString:@"iPhone5,3"])    return @"iPhone 5C";
+  if ([platform isEqualToString:@"iPhone5,4"])    return @"iPhone 5C";
+  if ([platform isEqualToString:@"iPhone6,1"])    return @"iPhone 5S";
+  if ([platform isEqualToString:@"iPhone6,2"])    return @"iPhone 5S";
+  if ([platform isEqualToString:@"iPhone7,1"])    return @"iPhone 6 Plus";
+  if ([platform isEqualToString:@"iPhone7,2"])    return @"iPhone 6";
+  if ([platform isEqualToString:@"iPhone8,1"])    return @"iPhone 6S";
+  if ([platform isEqualToString:@"iPhone8,2"])    return @"iPhone 6S Plus";
+  if ([platform isEqualToString:@"iPhone8,4"])    return @"iPhone SE";
+  if ([platform isEqualToString:@"iPhone9,1"])    return @"iPhone 7";
+  if ([platform isEqualToString:@"iPhone9,3"])    return @"iPhone 7";
+  if ([platform isEqualToString:@"iPhone9,2"])    return @"iPhone 7 Plus";
+  if ([platform isEqualToString:@"iPhone9,4"])    return @"iPhone 7 Plus";
+  if ([platform isEqualToString:@"iPhone10,1"])   return @"iPhone 8";
+  if ([platform isEqualToString:@"iPhone10.4"])   return @"iPhone 8";
+  if ([platform isEqualToString:@"iPhone10,2"])   return @"iPhone 8 Plus";
+  if ([platform isEqualToString:@"iPhone10,5"])   return @"iPhone 8 Plus";
+  if ([platform isEqualToString:@"iPhone10,3"])   return @"iPhone X";
+  if ([platform isEqualToString:@"iPhone10,6"])   return @"iPhone X";
+  if ([platform isEqualToString:@"iPhone11,2"])   return @"iPhone XS";
+  if ([platform isEqualToString:@"iPhone11,4"])   return @"iPhone XS Max";
+  if ([platform isEqualToString:@"iPhone11,6"])   return @"iPhone XS Max";
+  if ([platform isEqualToString:@"iPhone11,8"])   return @"iPhone XR";
+	if ([platform isEqualToString:@"iPhone12,1"])   return @"iPhone 11";
+	if ([platform isEqualToString:@"iPhone12,3"])   return @"iPhone 11 Pro";
+	if ([platform isEqualToString:@"iPhone12,5"])   return @"iPhone 11 Pro Max";
+	if ([platform isEqualToString:@"iPhone12,8"])   return @"iPhone SE 2";
+	if ([platform isEqualToString:@"iPhone13,1"])   return @"iPhone 12 mini";
+	if ([platform isEqualToString:@"iPhone13,2"])   return @"iPhone 12";
+  if ([platform isEqualToString:@"iPhone13,3"])   return @"iPhone 12 Pro";
+	if ([platform isEqualToString:@"iPhone13,4"])   return @"iPhone 12 Pro Max";
+	if ([platform isEqualToString:@"iPhone14,4"])   return @"iPhone 13 mini";
+  if ([platform isEqualToString:@"iPhone14,5"])   return @"iPhone 13";
+	if ([platform isEqualToString:@"iPhone14,2"])   return @"iPhone 13 Pro";
+	if ([platform isEqualToString:@"iPhone14,3"])   return @"iPhone 13 Pro Max";
+  if ([platform isEqualToString:@"iPhone14,7"])   return @"iPhone 14";
+	if ([platform isEqualToString:@"iPhone14,7"])   return @"iPhone 14 Plus";
+	if ([platform isEqualToString:@"iPhone15,2"])   return @"iPhone 14 Pro";
+	if ([platform isEqualToString:@"iPhone15,2"])   return @"iPhone 14 Pro Max";
 
 
     // iPod
@@ -74,7 +75,7 @@
     if ([platform isEqualToString:@"iPad2,2"])      return @"iPad 2 (GSM)";
     if ([platform isEqualToString:@"iPad2,3"])      return @"iPad 2 (CDMA)";
     if ([platform isEqualToString:@"iPad2,4"])      return @"iPad 2 (32nm)";
-	if ([platform isEqualToString:@"iPad2,5"])      return @"iPad mini (WiFi)";
+  if ([platform isEqualToString:@"iPad2,5"])      return @"iPad mini (WiFi)";
 	if ([platform isEqualToString:@"iPad2,6"])      return @"iPad mini (GSM)";
 	if ([platform isEqualToString:@"iPad2,7"])      return @"iPad mini (CDMA)";
     if ([platform isEqualToString:@"iPad3,1"])      return @"iPad 3 (WiFi)";
